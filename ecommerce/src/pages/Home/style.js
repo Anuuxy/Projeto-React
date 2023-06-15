@@ -27,16 +27,16 @@ export const Container = styled.div`
 `;
 
 export const NavBarContainer = styled.div`
+  align-items: center;
   display: inline-flex;
   position: relative;
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
 
   background-color: #343434;
-  padding: 0 20px;
+  padding: 0 ;
   height: 30px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+ 
 
   box-shadow: 0 10px 40px rgba(159, 162, 177, 0.9);
 
@@ -46,6 +46,7 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavBar = styled.ul`
+  justify-content: center;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -53,9 +54,8 @@ export const NavBar = styled.ul`
   margin: 0;
   width: 100%;
   height: 100%;
-  padding: 0 0 0 70px;
-  animation: ${slideInFromLeft} 0.5s ease-in;
-
+  padding: 0 0 0 0px;
+  
   @media screen and (max-width: 768px) {
     padding: 0;
     gap: 10px;
@@ -64,6 +64,8 @@ export const NavBar = styled.ul`
   a {
     height: 100%;
   }
+
+  animation: ${slideInFromLeft} 0.5s ease-in;
 `;
 
 export const NavItem = styled.li`
@@ -167,31 +169,33 @@ export const CardProduct = styled.div`
   cursor: pointer;
   transition: .1s;
   text-align: center;
-  background-color: #ffffff05;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(15px);
+  background-color: white;
+  //backdrop-filter: blur(25px);
+  //-webkit-backdrop-filter: blur(15px);
   animation: cards .3s linear;
-  border-radius: 7%;
 
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 15px 10px rgba(255,18,18,0.75);
+    box-shadow: 0px 0px 15px 10px rgba(255,18,18,0.4);
     
   }
 
   img {
     width: 15vw;
+    mix-blend-mode: multiply;
   }
 
   h1 {
     font-size: 20px;
     margin: 0;
     width: 200px;
-    text-shadow: 2px 2px #000;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   span {
-    text-shadow: 2px 2px #000;
+    color: black;
   }
 
   @keyframes cards {
